@@ -1,0 +1,9 @@
+# modules
+node_modules
+
+# build
+build
+dist
+
+# misc
+*.DS_Store

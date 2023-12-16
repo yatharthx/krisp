@@ -1,0 +1,13 @@
+{% extends "layout.njk" %}
+{% block content %}
+    <h1>Blog Posts</h1>
+    <ul class="posts">
+      {% for post in posts %}
+      <li>
+        <span>{{post.meta.date_of_publish}}</span>
+        &raquo;
+        <a href="/posts/{{post.slug}}">{{post.meta.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+{% endblock %}

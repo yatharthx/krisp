@@ -1,0 +1,9 @@
+{% extends "layout.njk" %}
+{% block content %}
+    <h1>{{ post.meta.title }}</h1>
+    <p class="meta">{{ post.meta.date_of_publish }} {{" - " if post.meta.author }}{{ post.meta.author if post.meta.author }}</p>
+    {% if post.meta.featured_image %}
+        <img src="{{ post.meta.featured_image }}" alt="{{ post.meta.title }}" style="width: 100%;">
+    {% endif %}
+    {{ post.html | safe }}
+{% endblock %}
