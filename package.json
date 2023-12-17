@@ -1,5 +1,5 @@
 {
-  "name": "krispmd",
+  "name": "krisp",
   "version": "0.0.1",
   "description": "Serve your blog from markdown files",
   "scripts": {
