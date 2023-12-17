@@ -16,10 +16,13 @@ const njk = nunjucks.configure(viewsPath, {
 export const view = {
   render: (template: string, context: Record<string, unknown>): string => {
     // extend context with project manifest
-    context.site_name = conf.projectManifest.name;
-    context.email = conf.projectManifest.email;
+    const { basicAuth, ...restOfManifest } = conf.projectManifest;
+    const extendedContext = {
+      $manifest: restOfManifest,
+      ...context,
+    };
 
     // TODO: add extension based on configuration
-    return njk.render(`${template}.njk`, context);
+    return njk.render(`${template}.njk`, extendedContext);
   },
 };

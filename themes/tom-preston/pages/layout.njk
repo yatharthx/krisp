@@ -1,3 +1,6 @@
+{% set title = $manifest.website.metadata.title %}
+{% set email = $manifest.email %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +10,12 @@
     rel="stylesheet"
     href="/assets/styles.css"
   />
-  <title>{{site_name}}</title>
+  <title>{{title}}</title>
 </head>
 <body>
   <div class="site">
     <div class="title">
-      <a href="/">{{site_name}}</a>
+      <a href="/">{{title}}</a>
     </div>
     <main id="home">
       {% block content %}{% endblock %}
@@ -20,7 +23,7 @@
     <footer class="footer">
       <div class="contact">
         <p>
-          {{site_name}}
+          {{title}}
           <br />
           <a href="mailto:{{email}}">{{email}}</a>
         </p>

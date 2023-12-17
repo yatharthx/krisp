@@ -1,12 +1,17 @@
 type ProjectManifest = {
   theme: "tom-preston";
-  name: string;
-  email: string;
   basicAuth: {
     username: string;
     password: string;
   };
-};
+  website: {
+    title: string;
+    url: string;
+    metadata: {
+      title: string;
+    };
+  };
+} & Record<string, any>;
 export const fromProjectManifest = (manifest: ProjectManifest) => {
   const { theme, ...restOfManifest } = manifest;
   // TODO: support other themes (and make this dynamic?)
