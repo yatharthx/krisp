@@ -1,10 +1,23 @@
 <div align="center">
-  <img src="/assets/krisp_banner.jpeg" width="100%" />
+  <img src="https://raw.githubusercontent.com/thebrokenfinger/krisp/main/assets/krisp_banner.jpeg" width="100%" />
   <h4>
     Krisp
   </h4>
   <p style="color: #666;">
     Turn your markdown files into a website.
+  </p>
+  <p>
+    <a href="https://www.npmjs.com/package/krisp">
+      <img src="https://img.shields.io/npm/v/krisp.svg?style=flat-square" />
+    </a>
+    <a href="/license">
+      <img src="https://img.shields.io/github/license/thebrokenfinger/krisp.svg?style=flat-square" />
+    </a>
+  </p>
+  <p style="font-size:14px;text-decoration:underline;">
+    <a href="https://demo.krispjs.org">
+      View Demo
+    </a>
   </p>
 </div>
 
