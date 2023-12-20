@@ -40,5 +40,15 @@ export const getPosts = async () => {
       };
     })
   );
-  return posts;
+
+  // sort posts by publish date
+  // latest first
+  const sortedPosts = posts.sort((a, b) => {
+    return (
+      new Date(b.meta.publish_date).getTime() -
+      new Date(a.meta.publish_date).getTime()
+    );
+  });
+
+  return sortedPosts;
 };
