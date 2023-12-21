@@ -1,6 +1,6 @@
 {
   "name": "krisp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Serve your blog from markdown files",
   "scripts": {
     "dev": "ncc build src/cli.ts -w -o ./dist",
