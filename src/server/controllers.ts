@@ -48,5 +48,23 @@ class PostsController extends Controller {
   }
 }
 
+class ApiController extends Controller {
+  public static path = "/api/posts";
+
+  async action(event: H3Event): Promise<EventHandlerResponse> {
+    try {
+      const posts = await getPosts();
+      return {
+        posts,
+      };
+    } catch (error) {
+      event.node.res.statusCode = 500;
+      return {
+        message: "Internal server error",
+      };
+    }
+  }
+}
+
 // export controllers
-export const controllers = [IndexController, PostsController];
+export const controllers = [IndexController, PostsController, ApiController];
